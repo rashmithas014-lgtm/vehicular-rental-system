@@ -2,64 +2,121 @@
 <html>
 <head>
     <title>Vehicular Rental System</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f6f8;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Vehicular Rental System</h1>
+<h1>Vehicular Rental System</h1>
 
-    <p>Welcome to the Vehicular Rental System website.</p>
-
-    <h3>Features</h3>
-    <ul>
-        <li>User Registration</li>
-        <li>User Login</li>
-        <li>View Available Vehicles</li>
-        <li>Vehicle Booking</li>
-        <li>Bill Generation</li>
-    </ul>
-
-    <p>
-        Backend is implemented using <b>Java</b> and <b>MySQL</b>.
-    </p>
-
-</body>
-</html>
+<p>
+This project is developed using <b>Java</b> and <b>MySQL</b>.  
+The backend logic is implemented in Eclipse, and the frontend
+documentation is hosted using GitHub Pages.
+</p>
 
 <hr>
 
-<h2>Project Execution & Integration</h2>
-
-<p>
-This project is implemented using a hybrid approach.
-The frontend of the Vehicular Rental System is hosted online
-using GitHub Pages, which provides a public website link.
-</p>
-
-<p>
-The backend logic such as user registration, vehicle viewing,
-booking, and bill calculation is implemented using Java and
-MySQL through JDBC in Eclipse.
-</p>
-
-<h3>Backend Execution</h3>
-<p>
-Backend operations are executed locally in Eclipse.
-Booking details are stored in the MySQL database and
-displayed in the console output.
-</p>
-
-<h3>Sample Booking Output</h3>
+<div class="section">
+<h2>Main Menu Output</h2>
 <pre>
+Database connected successfully
+
+1.Register
+2.Login
+3.View Vehicles
+4.Book Vehicle
+5.Exit
+</pre>
+</div>
+
+<div class="section">
+<h2>1. User Registration</h2>
+<pre>
+Input:
+Username: Rash
+Password: rash123
+
+Output:
+Registration Successful
+</pre>
+</div>
+
+<div class="section">
+<h2>2. User Login</h2>
+<pre>
+Input:
+Username: Rash
+Password: rash123
+
+Output:
+Login Successful
+</pre>
+</div>
+
+<div class="section">
+<h2>3. View Vehicles</h2>
+<pre>
+1 Honda Activa Two Wheeler 300 Available
+2 Swift Car Four Wheeler 1500 Available
+</pre>
+</div>
+
+<div class="section">
+<h2>4. Book Vehicle</h2>
+<pre>
+Input:
 Username: Rash
 Vehicle ID: 1
 Days: 2
 
+Output:
 Booking Successful
-Total Amount: ₹3000
+Total Amount: ₹600
 </pre>
+</div>
 
+<div class="section">
+<h2>5. Booking Stored in Database</h2>
+<pre>
+SELECT * FROM bookings;
+
+Output:
+1 | Rash | 1 | 2 | 600
+</pre>
+</div>
+
+<div class="section">
+<h2>Project Integration</h2>
 <p>
-This website acts as the project interface and documentation,
-while backend processing is handled by the Java application.
+The frontend of this project is hosted online using GitHub Pages.
+The backend Java application runs locally and connects to MySQL
+using JDBC. The website represents the workflow and output of
+the backend system.
 </p>
+</div>
 
+<hr>
+
+<p><b>Project Status:</b> Successfully Executed ✔</p>
+
+</body>
+</html>
