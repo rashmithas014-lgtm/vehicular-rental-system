@@ -1,41 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vehicular Rental System</title>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f4f6f8;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        pre {
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            padding: 15px;
-            overflow-x: auto;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Vehicular Rental System</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(120deg, #1e3c72, #2a5298);
+        color: #333;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #1e3c72;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: #2a5298;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 5px;
+        margin-top: 30px;
+    }
+
+    pre {
+        background: #f7f9fc;
+        border-left: 5px solid #2a5298;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-size: 14px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+    }
+
+    table th {
+        background: #2a5298;
+        color: white;
+    }
+
+    table tr:nth-child(even) {
+        background: #f2f6ff;
+    }
+
+    .status {
+        font-weight: bold;
+        color: green;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #777;
+        font-size: 14px;
+    }
+</style>
 </head>
+
 <body>
+
+<div class="container">
 
 <h1>Vehicular Rental System</h1>
 
-<p>
-This project is developed using <b>Java</b> and <b>MySQL</b>.  
-The backend logic is implemented in Eclipse, and the frontend
-documentation is hosted using GitHub Pages.
-</p>
-
-<hr>
-
-<div class="section">
 <h2>Main Menu Output</h2>
 <pre>
 Database connected successfully
@@ -46,77 +94,106 @@ Database connected successfully
 4.Book Vehicle
 5.Exit
 </pre>
-</div>
 
-<div class="section">
-<h2>1. User Registration</h2>
+<h2>User Registration</h2>
 <pre>
-Input:
 Username: Rash
 Password: rash123
 
-Output:
 Registration Successful
 </pre>
-</div>
 
-<div class="section">
-<h2>2. User Login</h2>
+<h2>User Login</h2>
 <pre>
-Input:
 Username: Rash
 Password: rash123
 
-Output:
 Login Successful
 </pre>
-</div>
 
-<div class="section">
-<h2>3. View Vehicles</h2>
-<pre>
-1 Honda Activa Two Wheeler 300 Available
-2 Swift Car Four Wheeler 1500 Available
-</pre>
-</div>
+<h2>Available Vehicles</h2>
 
-<div class="section">
-<h2>4. Book Vehicle</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Vehicle Name</th>
+        <th>Type</th>
+        <th>Price / Day (₹)</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Honda Activa</td>
+        <td>Two Wheeler</td>
+        <td>300</td>
+        <td class="status">Available</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Swift Car</td>
+        <td>Four Wheeler</td>
+        <td>1500</td>
+        <td class="status">Available</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Royal Enfield</td>
+        <td>Two Wheeler</td>
+        <td>800</td>
+        <td class="status">Available</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Honda City</td>
+        <td>Four Wheeler</td>
+        <td>2200</td>
+        <td class="status">Available</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>TVS Apache</td>
+        <td>Two Wheeler</td>
+        <td>600</td>
+        <td class="status">Available</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Hyundai Creta</td>
+        <td>Four Wheeler</td>
+        <td>2500</td>
+        <td class="status">Available</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Bajaj Pulsar</td>
+        <td>Two Wheeler</td>
+        <td>500</td>
+        <td class="status">Available</td>
+    </tr>
+</table>
+
+<h2>Vehicle Booking</h2>
 <pre>
-Input:
 Username: Rash
 Vehicle ID: 1
 Days: 2
 
-Output:
 Booking Successful
 Total Amount: ₹600
 </pre>
-</div>
 
-<div class="section">
-<h2>5. Booking Stored in Database</h2>
+<h2>Booking Stored in Database</h2>
 <pre>
 SELECT * FROM bookings;
 
-Output:
 1 | Rash | 1 | 2 | 600
 </pre>
+
+<footer>
+Vehicular Rental System | Java + MySQL Project
+</footer>
+
 </div>
-
-<div class="section">
-<h2>Project Integration</h2>
-<p>
-The frontend of this project is hosted online using GitHub Pages.
-The backend Java application runs locally and connects to MySQL
-using JDBC. The website represents the workflow and output of
-the backend system.
-</p>
-</div>
-
-<hr>
-
-<p><b>Project Status:</b> Successfully Executed ✔</p>
 
 </body>
 </html>
