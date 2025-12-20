@@ -8,72 +8,83 @@
     body {
         margin: 0;
         font-family: "Segoe UI", Arial, sans-serif;
-        background: linear-gradient(120deg, #1e3c72, #2a5298);
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
         color: #333;
     }
 
     .container {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 40px auto;
         background: #ffffff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        padding: 35px;
+        border-radius: 14px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.25);
     }
 
     h1 {
         text-align: center;
-        color: #1e3c72;
-        margin-bottom: 10px;
+        color: #203a43;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
     }
 
     h2 {
-        color: #2a5298;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 5px;
-        margin-top: 30px;
+        color: #2c5364;
+        margin-top: 35px;
+        border-left: 6px solid #2c5364;
+        padding-left: 10px;
     }
 
     pre {
-        background: #f7f9fc;
-        border-left: 5px solid #2a5298;
-        padding: 15px;
-        border-radius: 6px;
-        overflow-x: auto;
+        background: #f4f7fb;
+        border-radius: 8px;
+        padding: 16px;
         font-size: 14px;
+        border-left: 5px solid #2c5364;
     }
 
     table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 15px;
-    }
-
-    table th, table td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: center;
+        margin-top: 20px;
+        font-size: 15px;
     }
 
     table th {
-        background: #2a5298;
-        color: white;
+        background: #2c5364;
+        color: #fff;
+        padding: 12px;
+    }
+
+    table td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: center;
     }
 
     table tr:nth-child(even) {
-        background: #f2f6ff;
+        background: #f2f6fa;
     }
 
-    .status {
+    .available {
+        color: #0a7d32;
         font-weight: bold;
-        color: green;
+    }
+
+    .badge {
+        display: inline-block;
+        background: #2c5364;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 12px;
     }
 
     footer {
         text-align: center;
-        margin-top: 40px;
-        color: #777;
+        margin-top: 45px;
         font-size: 14px;
+        color: #777;
     }
 </style>
 </head>
@@ -84,10 +95,8 @@
 
 <h1>Vehicular Rental System</h1>
 
-<h2>Main Menu Output</h2>
+<h2>Main Menu</h2>
 <pre>
-Database connected successfully
-
 1.Register
 2.Login
 3.View Vehicles
@@ -114,65 +123,26 @@ Login Successful
 <h2>Available Vehicles</h2>
 
 <table>
-    <tr>
-        <th>ID</th>
-        <th>Vehicle Name</th>
-        <th>Type</th>
-        <th>Price / Day (₹)</th>
-        <th>Status</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>Honda Activa</td>
-        <td>Two Wheeler</td>
-        <td>300</td>
-        <td class="status">Available</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Swift Car</td>
-        <td>Four Wheeler</td>
-        <td>1500</td>
-        <td class="status">Available</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Royal Enfield</td>
-        <td>Two Wheeler</td>
-        <td>800</td>
-        <td class="status">Available</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>Honda City</td>
-        <td>Four Wheeler</td>
-        <td>2200</td>
-        <td class="status">Available</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>TVS Apache</td>
-        <td>Two Wheeler</td>
-        <td>600</td>
-        <td class="status">Available</td>
-    </tr>
-    <tr>
-        <td>6</td>
-        <td>Hyundai Creta</td>
-        <td>Four Wheeler</td>
-        <td>2500</td>
-        <td class="status">Available</td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>Bajaj Pulsar</td>
-        <td>Two Wheeler</td>
-        <td>500</td>
-        <td class="status">Available</td>
-    </tr>
+<tr>
+    <th>ID</th>
+    <th>Vehicle Name</th>
+    <th>Type</th>
+    <th>Price / Day (₹)</th>
+    <th>Status</th>
+</tr>
+<tr><td>1</td><td>Honda Activa</td><td>Two Wheeler</td><td>300</td><td class="available">Available</td></tr>
+<tr><td>2</td><td>Swift Car</td><td>Four Wheeler</td><td>1500</td><td class="available">Available</td></tr>
+<tr><td>3</td><td>Royal Enfield</td><td>Two Wheeler</td><td>800</td><td class="available">Available</td></tr>
+<tr><td>4</td><td>Honda City</td><td>Four Wheeler</td><td>2200</td><td class="available">Available</td></tr>
+<tr><td>5</td><td>TVS Apache</td><td>Two Wheeler</td><td>600</td><td class="available">Available</td></tr>
+<tr><td>6</td><td>Hyundai Creta</td><td>Four Wheeler</td><td>2500</td><td class="available">Available</td></tr>
+<tr><td>7</td><td>Bajaj Pulsar</td><td>Two Wheeler</td><td>500</td><td class="available">Available</td></tr>
+<tr><td>8</td><td>KTM Duke 390</td><td>Two Wheeler</td><td>1200</td><td class="available">Available</td></tr>
+<tr><td>9</td><td>Maruti Baleno</td><td>Four Wheeler</td><td>1800</td><td class="available">Available</td></tr>
+<tr><td>10</td><td>Mahindra Thar</td><td>Four Wheeler</td><td>3000</td><td class="available">Available</td></tr>
 </table>
 
-<h2>Vehicle Booking</h2>
+<h2>Vehicle Booking – Example 1</h2>
 <pre>
 Username: Rash
 Vehicle ID: 1
@@ -182,15 +152,27 @@ Booking Successful
 Total Amount: ₹600
 </pre>
 
-<h2>Booking Stored in Database</h2>
+<h2>Vehicle Booking – Example 2</h2>
 <pre>
-SELECT * FROM bookings;
+Username: Rash
+Vehicle ID: 4
+Days: 3
 
-1 | Rash | 1 | 2 | 600
+Booking Successful
+Total Amount: ₹6600
+</pre>
+
+<h2>Booking Records</h2>
+<pre>
+ID | Username | Vehicle ID | Days | Total Amount
+1  | Rash     | 1          | 2    | 600
+2  | Rash     | 4          | 3    | 6600
 </pre>
 
 <footer>
-Vehicular Rental System | Java + MySQL Project
+<span class="badge">Java</span>
+<span class="badge">MySQL</span>
+<span class="badge">Vehicular Rental System</span>
 </footer>
 
 </div>
